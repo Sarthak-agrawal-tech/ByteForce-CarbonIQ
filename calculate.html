@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Calculator</title>
+  <link rel="stylesheet" href="stylesheets/calculator.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>Carbon Footprint Calculator</h1>
+
+
+    <form id="carbonForm">
+      <!-- Basics of Company Section -->
+      <div class="section">
+        <h2>Basics of Company</h2>
+        <label>Business Type:
+          <input type="text" id="companyName" placeholder="Enter business type">
+        </label>
+        <label>Location:
+          <input type="text" id="location" placeholder="Enter location">
+        </label>
+        <label>Time Period (years):
+          <input type="number" id="timePeriod" placeholder="Enter time period in years">
+        </label>
+        <label>Household Size (acres):
+          <input type="number" id="householdSize" min="1" placeholder="Enter size in acres">
+        </label>
+      </div>
+
+      <!-- Electricity Section -->
+      <div class="section">
+        <h2>Electricity</h2>
+        <label>Electricity (kWh):
+          <input type="number" id="electricity" min="0" placeholder="Enter kWh">
+        </label>
+        <label>Natural Gas (therms):
+          <input type="number" id="naturalGas" min="0" placeholder="Enter therms">
+        </label>
+        <label>Fuel Combustion (gallons):
+          <input type="number" id="fuelCombustion" min="0" placeholder="Enter gallons">
+        </label>
+      </div>
+
+      <!-- Transportation Section -->
+      <div class="section">
+        <h2>Transportation</h2>
+        <label>Business Trips (miles):
+          <input type="number" id="businessTrips" min="0" placeholder="Enter miles">
+        </label>
+        <label>Car Usage (miles):
+          <input type="number" id="carUsage" min="0" placeholder="Enter miles">
+        </label>
+        <label>Transportation of Goods via Train (miles):
+          <input type="number" id="goodsTrain" min="0" placeholder="Enter miles">
+        </label>
+        <label>Transportation of Goods via Trucks (miles):
+          <input type="number" id="goodsTruck" min="0" placeholder="Enter miles">
+        </label>
+      </div>
+
+      <!-- Miscellaneous Section -->
+      <div class="section">
+        <h2>Miscellaneous</h2>
+        <label>Food and Drink Products (Kg):
+          <input type="number" id="foodProducts" min="0" placeholder="Enter amount in Kgs">
+        </label>
+        <label>Computer and IT Equipment (Kwh):
+          <input type="number" id="itEquipment" min="0" placeholder="Enter amount of energy used">
+        </label>
+        <label>Paper consumption (Kgs):
+          <input type="number" id="paper" min="0" placeholder="Enter paper consumption">
+        </label>
+        <label>Water usage (Liters):
+          <input type="number" id="water" min="0" placeholder="Enter water usage">
+        </label>
+        <label>Waste management (Kgs):
+          <input type="number" id="waste" min="0" placeholder="Enter waste management">
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-button">Calculate Footprint</button>
+    </form>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
